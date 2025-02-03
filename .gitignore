@@ -1,7 +1,8 @@
 db.sqlite3
 .env
-.env
+
 
 # Ignore compiled Python files
 *.pyc
 __pycache__/
+bfg-1.14.0.jar
