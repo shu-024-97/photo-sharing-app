@@ -1,4 +1,4 @@
-#!/Users/nk/PhotoSharingApp/photo-sharing-app/venv/bin/python
+#!/Users/nk/PhotoSharingApp/photo-sharing-app/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

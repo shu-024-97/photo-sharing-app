@@ -1,0 +1,7 @@
+db.sqlite3
+.env
+.env
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
