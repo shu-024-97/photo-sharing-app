@@ -43,6 +43,13 @@ INSTALLED_APPS = [
     'users',  # カスタムユーザーモデルを使うためのアプリ
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -128,3 +135,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Custom User Model を使用
 AUTH_USER_MODEL = 'users.CustomUser'
+
+#画像保存するための設定
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#.env使うようにする
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # .env を読み込む
+
+SECRET_KEY = os.getenv("SECRET_KEY", "your-default-secret-key")
